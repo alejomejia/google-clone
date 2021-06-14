@@ -3,11 +3,11 @@ import Icon from '../Icon'
 
 const Body = () => {
   return (
-    <section className='flex flex-col items-center mb-6'>
+    <section className='flex flex-col items-center mb-6 px-4'>
       <Logo />
       <form className='w-full max-w-lg my-7'>
         <div className='flex items-center px-4 py-2 border border-gray-200 rounded-full hover:shadow-md'>
-          <label htmlFor='google-search'>
+          <label htmlFor='google-search' className='flex'>
             <Icon name='search' classes='text-gray-400 mr-2 text-xl' />
           </label>
           <input id='google-search' className='flex-grow text-gray-700 focus:outline-none' type='text' />
