@@ -1,7 +1,6 @@
 import Head from '../components/Head'
 import Header from '../components/Header'
-import Logo from '../components/Logo'
-import Icon from '../components/Icon'
+import Body from '../components/Body'
 import Footer from '../components/Footer'
 
 export default function Home() {
@@ -10,6 +9,7 @@ export default function Home() {
       <Head />
       <main className='flex flex-col justify-between min-h-screen'>
         <Header />
+        <Body />
         <Footer />
       </main>
     </>
