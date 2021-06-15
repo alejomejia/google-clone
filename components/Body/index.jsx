@@ -1,7 +1,23 @@
+import { useRef } from 'react'
+import { useRouter } from 'next/router'
+
 import Logo from '../Logo'
 import Icon from '../Icon'
+import Button from '../Button'
 
 const Body = () => {
+  const searchInputRef = useRef(null)
+  const router = useRouter()
+
+  const handleSearch = (e) => {
+    e.preventDefault()
+    const term = searchInputRef.current.value
+
+    if (!term) return
+
+    router.push(`/search?term=${term}`)
+  }
+
   return (
     <section className='flex flex-col items-center mb-6 px-4'>
       <Logo />
@@ -10,13 +26,13 @@ const Body = () => {
           <label htmlFor='google-search' className='flex'>
             <Icon name='search' classes='text-gray-400 mr-2 text-xl' />
           </label>
-          <input id='google-search' className='flex-grow text-gray-700 focus:outline-none' type='text' />
+          <input ref={searchInputRef} id='google-search' className='flex-grow text-gray-700 focus:outline-none' type='text' />
           <Icon name='microphone' classes='w-6 ml-2 cursor-pointer' />
         </div>
       </form>
       <div className='flex gap-3'>
-        <button className='bg-gray-100 text-sm text-gray-600 px-3 py-2 rounded hover:shadow'>Google Search</button>
-        <button className='bg-gray-100 text-sm text-gray-600 px-3 py-2 rounded hover:shadow'>I'm Feeling Lucky</button>
+        <Button onClick={handleSearch}>Google Search</Button>
+        <Button onClick={handleSearch}>I'm Feeling Lucky</Button>
       </div>
     </section>
   )

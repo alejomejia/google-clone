@@ -1,0 +1,8 @@
+.btn {
+  @apply
+    px-3 py-2 rounded 
+    text-sm text-gray-600 
+    bg-gray-100
+    focus:outline-none
+    hover:shadow
+}
