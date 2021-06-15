@@ -1,4 +1,4 @@
-[Check the app!](https://alejo-mejia-google-clone.vercel.app/) 🚀
+[Check the app!](https://alejomejia-google-clone.vercel.app/) 🚀
 
 # Next.js + Tailwind CSS Example
 
